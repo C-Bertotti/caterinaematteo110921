@@ -23,12 +23,12 @@
         <footer>
             <div class="mycontainer container-m">
                 <div>
-                    <img class="footer__sposi" src="{{asset('storage/img/icone/sposa.svg')}}" alt="">
+                    <img class="footer__sposi" src="{{asset('storage/img/icone/sposa.svg')}}" alt="Icona di una sposa">
                     <p>392 03 25 501</p>
                 </div>
                 <div>
                     <p>346 01 64 085</p>
-                    <img class="footer__sposi" src="{{asset('storage/img/icone/sposo.svg')}}" alt="">
+                    <img class="footer__sposi" src="{{asset('storage/img/icone/sposo.svg')}}" alt="Icona di uno sposo">
                 </div>    
             </div>
         </footer>
