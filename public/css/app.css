@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #121F38;
+}
+
+.mycontainer {
+  width: 90%;
+  margin: auto;
+}
+.mycontainer.container-m {
+  max-width: 500px;
+}
+@media screen and (min-width: 801px) {
+  .mycontainer.container-m {
+    max-width: 1000px;
+  }
+}
+
+footer {
+  background-color: #F3E0D6;
+}
+footer .mycontainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .mycontainer > div {
+  display: flex;
+  align-items: center;
+}
+footer .footer__sposi {
+  height: 30px;
+  fill: #121F38;
+  padding: 10px 0;
+}
+footer p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  margin: 0 7px;
+}
+
+.heroBgFlower {
+  border-top: 15px solid #EDF5F7;
+  padding: 40px 0;
+  background-image: url(/images/bg.jpg?79ce9e6114dc81ab71222ec0cd278671);
+  background-size: cover;
+  text-align: center;
+}
+.heroBgFlower .cerchio {
+  background-color: #fff;
+  border-radius: 100%;
+  height: 290px;
+  width: 290px;
+  margin: auto;
+  box-shadow: 0px 0px 30px #DCE0E6;
+}
+@media screen and (min-width: 801px) {
+  .heroBgFlower .cerchio {
+    height: 350px;
+    width: 350px;
+  }
+}

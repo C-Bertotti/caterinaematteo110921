@@ -1,0 +1,72 @@
+//Palette
+    //Primary
+    $c-pr: #EDF5F7;
+
+    //Secondary
+    $c-sec: #C78665;
+    $c-sec-Light: #F3E0D6;
+
+    //Text
+    $c-f: #121F38;
+// /Palette
+
+//Font
+    //Font-Family
+    $ffpri: 'Montserrat', sans-serif;
+    $ffsec: 'Amatic SC', cursive; 
+
+    //Font-Weight
+    $fwLight: 300;
+    $fwReg: 400;
+    $fwMed: 500;
+    $fwBold: 600;
+
+// /Font
+
+//Responsive
+// Define the breakpoints
+    $breakpoint-s: 320px; // da 320 in su
+    $breakpoint-m: 480px; // da 480 in su
+    $breakpoint-l: 600px; // da 600 in su
+    $breakpoint-xl: 801px; // da 801 in su
+    $breakpoint-xxl: 1025px; // da 1025 in su
+    $breakpoint-xxxl: 1281px; // da 1280 in su
+
+
+    @mixin screen($size, $type: min, $pixels: $breakpoint-s) {
+
+    @if $size == 's' {
+        @media screen and ($type + -width: $breakpoint-s) {
+            @content;
+        }
+    }
+
+    @else if $size == 'm' {
+        @media screen and ($type + -width: $breakpoint-m) {
+            @content;
+        }
+    }
+
+    @else if $size == 'l' {
+        @media screen and ($type + -width: $breakpoint-l) {
+            @content;
+        }
+    }
+
+    @else if $size == 'xl' {
+        @media screen and ($type + -width: $breakpoint-xl) {
+            @content;
+        }
+    }
+
+    @else if $size == 'xxl' {
+        @media screen and ($type + -width: $breakpoint-xxl) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+    }
+// /Responsive

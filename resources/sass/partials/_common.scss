@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $c-f;
+}
+
+.mycontainer{
+    width: 90%;
+    margin: auto;
+
+    &.container-m{
+        max-width: 500px;
+
+        @include screen(xl) {
+            max-width: 1000px;
+        }
+    }
+}

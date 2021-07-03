@@ -1,0 +1,28 @@
+footer{
+    background-color: $c-sec-Light;
+
+    .mycontainer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;    
+    }
+
+    .mycontainer > div {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .footer__sposi{
+        height: 30px;
+        fill: $c-f;
+        padding: 10px 0;
+    }
+
+    p {
+        font-family: $ffpri;
+        font-weight: $fwReg;
+        font-size: 13px;
+        margin: 0 7px;
+    }
+}
