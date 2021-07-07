@@ -1,14 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-h1 {
+h1, h2 {
   font-family: "Amatic SC", cursive;
   font-weight: 400;
+  color: #121F38;
+}
+
+h1 {
   font-size: 70px;
   line-height: 0.9;
   margin: 0;
 }
 
+h2 {
+  font-size: 45px;
+}
+
 p {
   margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+}
+p strong {
+  font-weight: 600;
 }
 
 body {
@@ -28,8 +42,57 @@ body {
 }
 @media screen and (min-width: 801px) {
   .mycontainer.container-m {
-    max-width: 1000px;
+    max-width: 800px;
   }
+}
+@media screen and (min-width: 801px) {
+  .mycontainer.container-l {
+    width: 80%;
+  }
+}
+
+.bg-pri {
+  background-color: #EDF5F7;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+header nav .nav__left {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+}
+header nav .nav__left .nav__title {
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+}
+header nav .nav__left #burger {
+  height: 18px;
+}
+header nav #nav__right {
+  display: none;
+}
+header nav #nav__right.active {
+  display: block;
+}
+
+section {
+  padding: 45px 0;
+  text-align: center;
+}
+section .section__fiore {
+  height: 20px;
+}
+section .section__titolo {
+  margin: 0 0 25px;
+  text-transform: lowercase;
+}
+section .section__cuore {
+  height: 12px;
+  margin-top: 30px;
 }
 
 .heroBgFlower {

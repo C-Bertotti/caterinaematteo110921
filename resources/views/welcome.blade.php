@@ -2,19 +2,24 @@
 
 @section('pageTitle')
     Caterina e Matteo
-    
 @endsection
+
 
 @section('main')
 
-    @extends('layouts/hero/heroBgFlower')
-
-    @section('contenutoCerchio')
-        <div class="cerchio__caption__wrapper">
-            <img class="icona" src="{{asset('storage/img/icone/uccellini.svg')}}" alt="Icona di due uccellini che si danno un bacino">
-            <h1>Caterina<br>Matteo</h1>
-            <p>11 settembre 2021</p>    
+    @include('layouts/hero/heroBgFlower/heroHome')
+    <section>
+        <div class="mycontainer container-m">
+            <img class="section__fiore" src="{{asset('storage/img/fiori/papavero.svg')}}" alt="Papavero">
+            <h2 class="section__titolo">Grazie di cuore!</h2>
+            <p>Per noi é una vera <strong>gioia</strong> sapere che la nostra grandissima <strong>famiglia</strong>  ci accompagna in questa meravigliosa <strong>tappa</strong> del nostro cammino.</p>
+            <img class="section__cuore" src="{{asset('storage/img/icone/cuore.svg')}}" alt="Icona cuore">
         </div>
-    @endsection
+    </section>
+    <section class="bg-pri">
+
+    </section>
+
     
+
 @endsection

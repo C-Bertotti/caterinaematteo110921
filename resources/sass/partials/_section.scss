@@ -1,0 +1,25 @@
+section{
+    padding: 45px 0;
+    text-align: center;
+
+    .section{
+        &__fiore {
+            height: 20px;
+        }
+
+        &__titolo {
+            margin: 0 0 25px;
+            text-transform: lowercase;
+        }
+
+        &__cuore {
+            height: 12px;
+            margin-top: 30px;
+            
+        }
+
+
+    }
+
+    
+}
