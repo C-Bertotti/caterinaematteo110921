@@ -18,6 +18,49 @@ section{
             
         }
 
+        &__box__wrapper {
+            display: flex;
+            flex-direction: column;
+
+            @include screen(xl) {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+        
+        &__box {
+            padding: 30px;
+            background-color: #fff;
+
+            
+
+            &:not(:last-child){
+                margin-bottom: 30px; 
+
+                @include screen(xl) {
+                    margin-bottom: 0; 
+                }
+            }
+
+            @include screen(xl) {
+                flex-basis: calc((100% - 240px) / 3);
+            }
+            
+
+            p {
+                font-size: 14px;
+                line-height: 1.3;
+            }
+
+            
+
+            &__icona {
+                height: 60px;                
+            }
+            
+        }
 
     }
 

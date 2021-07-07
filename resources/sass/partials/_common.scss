@@ -7,7 +7,7 @@ body{
 }
 
 .mycontainer{
-    width: 90%;
+    width: 80%;
     margin: auto;
 
     &.container-m{
@@ -20,7 +20,7 @@ body{
 
     &.container-l{
         @include screen(xl) {
-            width: 80%;
+            max-width: 1100px;
         }
     }
 }
