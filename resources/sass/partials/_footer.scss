@@ -17,6 +17,10 @@ footer{
         height: 30px;
         fill: $c-f;
         padding: 10px 0;
+
+        @include screen(xl) {
+            padding: 15px 0;
+        }
     }
 
     p {

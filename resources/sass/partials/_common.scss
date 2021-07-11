@@ -24,3 +24,12 @@ body{
         }
     }
 }
+
+.divider {
+    background-image: url("/storage/img/bg.jpg");
+    background-size: cover;
+    
+    &__small{
+        height: 35px;
+    }
+}

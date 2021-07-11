@@ -1,4 +1,4 @@
-h1, h2 {
+h1, h2, h4 {
     font-family: $ffsec;
     font-weight: $fwReg;
 }
@@ -17,6 +17,12 @@ h3 {
     text-transform: uppercase;
     font-size: 16px;
     margin: 15px 0 20px;
+}
+
+h4 {
+ font-size: 35px;
+ margin: 0 0 15px;
+ text-transform: lowercase;
 }
 
 p {

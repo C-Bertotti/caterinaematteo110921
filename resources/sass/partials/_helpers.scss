@@ -1,3 +1,9 @@
 .bg-pri{
     background-color: $c-pr;
 }
+
+.d-none-xs {
+    @include screen(m) {
+        display: none;
+    }
+}

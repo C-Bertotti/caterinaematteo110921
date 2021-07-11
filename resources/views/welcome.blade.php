@@ -21,21 +21,21 @@
             <img class="section__fiore" src="{{asset('storage/img/fiori/fiore_viola.svg')}}" alt="Viola">
             <h2 class="section__titolo">Il nostro giorno</h2>
             <div class="section__box__wrapper">
-                <div href="#" class="section__box">
+                <a href="{{route('matrimonio')}}" class="section__box">
                     <img class="section__box__icona" src="{{asset('storage/img/icone/anelli.svg')}}" alt="Icona di due anelli">
                     <h3>Il matrimonio</h3>
                     <p>La cerimonia<br>e il ricevimento.</p>
-                </div>
-                <div href="#" class="section__box">
+                </a>
+                <a href="{{route('lista')}}" class="section__box">
                     <img class="section__box__icona" src="{{asset('storage/img/icone/lista-nozze.svg')}}" alt="Icona di una lettera">
                     <h3>La lista nozze</h3>
                     <p>“‘Sa ghe regalan?<br>I g’ha za tut!”</p>                    
-                </div>
-                <div href="#" class="section__box">
+                </a>
+                <a href="{{route('viaggio')}}" class="section__box">
                     <img class="section__box__icona" src="{{asset('storage/img/icone/viaggio.svg')}}" alt="Icona di una macchina fotografica">
                     <h3>Il viaggio</h3>
                     <p>Dove inizieremo<br>la nostra nuova avventura?</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>

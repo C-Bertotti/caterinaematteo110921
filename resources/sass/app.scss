@@ -1,5 +1,5 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// // Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // //Variables
 // @import 'variables';
@@ -17,12 +17,19 @@
 
 @import 'partials/header';
 @import 'partials/section';
+@import 'partials/slider';
 
 
-// hero
+
+// home
 @import 'partials/hero/heroBgFlower';
+
+//matrimonio
+@import 'partials/matrimonio/date-section';
+
 
 //footer
 @import 'partials/footer';
+
 
 

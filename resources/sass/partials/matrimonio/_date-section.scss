@@ -1,0 +1,42 @@
+.date__box,
+.date__wrapper,
+.date__right{
+    display: flex;
+}
+
+.date__box{
+    margin: auto;
+    max-width: 250px;
+    justify-content: center;
+
+    .date__wrapper {
+        div {
+            text-align: left;
+
+            p {
+                font-weight: $fwBold;
+                font-size: 10px;
+
+
+                &.date{
+                    font-size: 40px;
+                    font-weight: $fwMed;
+                    margin-top: -6px;
+                }
+            }
+        }
+
+        .date__left{
+            padding-right: 20px;
+            border-right: 1px solid $c-sec;
+        }
+
+        .date__right{
+            padding-left: 20px;
+
+            #date-h::after{
+                content: ':';
+            }
+        }
+    }
+}

@@ -13,6 +13,10 @@
         
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        {{-- swiper --}}
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     </head>
     <body>
         <header>
@@ -37,12 +41,16 @@
         </footer>
 
         {{-- script --}}
+        @yield('script')
         <script
             src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous">
         </script>
 
-        <script src="{{ asset('js/app.js') }}"></script>    
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>   
+
+        <script src="{{ asset('js/app.js') }}"></script> 
     </body>
 </html>
