@@ -11,6 +11,7 @@ h1 {
 
 h2 {
   font-size: 45px;
+  line-height: 1.1;
 }
 
 h3 {
@@ -28,6 +29,13 @@ h4 {
   font-size: 35px;
   margin: 0 0 15px;
   text-transform: lowercase;
+}
+
+h5 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #C78665;
+  margin: 8px 0 0;
 }
 
 p {
@@ -133,6 +141,9 @@ section .section__fiore {
 section .section__titolo {
   margin: 0 0 25px;
   text-transform: lowercase;
+}
+section .section__titolo.main__title {
+  margin-bottom: 0;
 }
 section .section__cuore {
   height: 12px;
@@ -333,6 +344,13 @@ section .section__box__icona {
 .viaggio__caption__wrp {
   display: flex;
   align-items: center;
+}
+
+.sec__box {
+  display: inline-block;
+  background-color: #F3E0D6;
+  padding: 25px;
+  margin: 40px 0;
 }
 
 .heroBgFlower {

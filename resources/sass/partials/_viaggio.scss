@@ -30,7 +30,11 @@
         display: flex;
         align-items: center;
     }
-
-
 }
 
+.sec__box{
+    display: inline-block;
+    background-color: $c-sec-Light;
+    padding: 25px;
+    margin: 40px 0;
+}
