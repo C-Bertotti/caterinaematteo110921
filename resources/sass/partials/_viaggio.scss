@@ -1,0 +1,36 @@
+.viaggio {
+    p.viaggio__title,
+    h1 {
+        display: inline-block;
+    }
+
+    p.viaggio__title {
+        font-family: $ffsec;
+        font-weight: $fwReg;
+        font-size: 140px !important;
+        margin-right: 15px !important;
+        color: $c-sec;
+
+        @include screen(xl) {
+            font-size: 160px !important;
+        }
+
+        &::after {
+            content: 'x';
+            font-size: 50px;
+            vertical-align: middle;
+
+            @include screen(xl) {
+                font-size: 60px;
+            }
+        }
+    }
+
+    &__caption__wrp {
+        display: flex;
+        align-items: center;
+    }
+
+
+}
+

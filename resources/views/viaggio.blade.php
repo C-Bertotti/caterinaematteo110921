@@ -26,7 +26,7 @@
 
 @section('main')
 
-    @include('layouts/hero/heroBgFlower/heroHome')
+    @include('layouts/hero/heroBgFlower/heroViaggio')
 
     
 

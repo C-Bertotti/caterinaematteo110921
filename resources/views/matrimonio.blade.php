@@ -4,6 +4,11 @@
     Caterina e Matteo
 @endsection
 
+@section('links')
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+@endsection
+
 @section('header')
     <div class="mycontainer container-l ">
         <nav>
@@ -34,16 +39,16 @@
                 <div class="date__wrapper">
                     <div class="date__left">
                         <p>giorni</p>
-                        <p class="date" id="date-d">64</p>
+                        <p class="date" id="date-d">0</p>
                     </div>
                     <div class="date__right">
                         <div>
                             <p>ore</p>
-                            <p class="date" id="date-h">10</p>
+                            <p class="date" id="date-h">0</p>
                         </div>
                         <div>
                             <p>minuti</p>
-                            <p class="date" id="date-m">11</p>
+                            <p class="date" id="date-m">0</p>
                         </div>
                     </div>
                 </div>
@@ -138,8 +143,12 @@
                 </div>
             </div>
         </div>
-
-
+    </section>
+    <section>
+        <div class="">
+            <img class="section__fiore" src="{{asset('storage/img/fiori/fiore_viola.svg')}}" alt="Viola">
+            <h2 class="section__titolo">i luoghi</h2>
+            <div id='map'></div>
         </div>
     </section>
 

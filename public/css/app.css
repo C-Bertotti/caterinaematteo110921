@@ -18,6 +18,11 @@ h3 {
   font-size: 16px;
   margin: 15px 0 20px;
 }
+h3.h3--secfont {
+  font-family: "Amatic SC", cursive;
+  font-weight: 400;
+  font-size: 45px;
+}
 
 h4 {
   font-size: 35px;
@@ -73,6 +78,9 @@ body {
 .divider__small {
   height: 35px;
 }
+.divider__lg {
+  height: 114px;
+}
 
 .bg-pri {
   background-color: #EDF5F7;
@@ -84,6 +92,13 @@ body {
   }
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
+header {
+  border-bottom: 15px solid #EDF5F7;
+}
 header nav {
   display: flex;
   flex-direction: column;
@@ -241,8 +256,86 @@ section .section__box__icona {
   background-image: url("/storage/img/foto/rifugiomaranza.jpg");
 }
 
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+.regalo__box {
+  margin-top: 40px;
+  padding: 35px 25px;
+  background-color: #fff;
+  text-align: left;
+}
+@media screen and (min-width: 1025px) {
+  .regalo__box {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.regalo__box .regalo__box__column:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1025px) {
+  .regalo__box .regalo__box__column:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .regalo__box .regalo__box__column {
+    flex-basis: calc( ( 100% - 60px) / 3);
+  }
+}
+.regalo__box h5 {
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+.regalo__box p {
+  font-size: 12px;
+}
+@media screen and (min-width: 480px) {
+  .regalo__box p {
+    font-size: 15px;
+  }
+}
+.regalo__box p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.viaggio p.viaggio__title,
+.viaggio h1 {
+  display: inline-block;
+}
+.viaggio p.viaggio__title {
+  font-family: "Amatic SC", cursive;
+  font-weight: 400;
+  font-size: 140px !important;
+  margin-right: 15px !important;
+  color: #C78665;
+}
+@media screen and (min-width: 801px) {
+  .viaggio p.viaggio__title {
+    font-size: 160px !important;
+  }
+}
+.viaggio p.viaggio__title::after {
+  content: "x";
+  font-size: 50px;
+  vertical-align: middle;
+}
+@media screen and (min-width: 801px) {
+  .viaggio p.viaggio__title::after {
+    font-size: 60px;
+  }
+}
+.viaggio__caption__wrp {
+  display: flex;
+  align-items: center;
+}
+
 .heroBgFlower {
-  border-top: 15px solid #EDF5F7;
   padding: 40px 0;
   background-image: url("/storage/img/bg.jpg");
   background-size: cover;
