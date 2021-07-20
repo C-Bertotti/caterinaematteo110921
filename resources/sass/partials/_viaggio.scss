@@ -38,3 +38,73 @@
     padding: 25px;
     margin: 40px 0;
 }
+
+.tappa {
+    &__wrp {
+        @include screen(xl) {
+            display: flex;
+        } 
+    }
+    &__wrp:nth-child(3n+1) {
+        @include screen(xl) {
+            flex-direction: row-reverse;
+
+
+            .tappa__box {
+                @include screen(xl) {
+                    margin-left: 20px;
+                    margin-right: 0px;
+                } 
+            }
+        } 
+    }
+    &__box {
+        text-align: left;
+        padding: 45px 35px;
+        margin: 10px 0;  
+        
+        @include screen(xl) {
+            flex-basis: 60%;
+            margin-right: 20px;
+        }  
+    }
+    
+    &__date {
+        font-family: $ffsec;
+        font-size: 20px;
+    }
+
+    &__title {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: $fwMed;
+        margin-bottom: 20px;
+    }
+
+    &__text p:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    &__img {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+
+        &.roma {
+            background-image: url("/storage/img/foto/roma.jpg");
+        }
+        &.napoli {
+            background-image: url("/storage/img/foto/pompei.jpg");
+        }
+        &.vigolana {
+            background-image: url("/storage/img/foto/vigolana.jpg");
+        }
+
+        @include screen(xl) {
+            height: auto;
+            flex-basis: 40%;
+            margin: 10px 0
+        }  
+    }
+    
+}

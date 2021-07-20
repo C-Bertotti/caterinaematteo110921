@@ -86,6 +86,9 @@ body {
 .divider__small {
   height: 35px;
 }
+.divider__med {
+  height: 75px;
+}
 .divider__lg {
   height: 114px;
 }
@@ -216,22 +219,47 @@ section .section__box__icona {
   }
 }
 
-.slider__matrimonio .swiper-slide {
-  height: 230px;
-}
-.slider__matrimonio .swiper-slide.cover {
+.slider .swiper-slide.cover {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.slider__matrimonio .swiper-slide.bg-pri {
+.slider .swiper-slide.bg-pri {
   border: 1px solid #E8F3F4;
 }
-.slider__matrimonio .swiper-slide.slider__int > div {
+.slider .swiper-slide.slider__int > div {
   padding: 50px 0 40px;
 }
-.slider__matrimonio .swiper-slide.slider__int .section__box__icona {
+.slider .swiper-slide.slider__int .section__box__icona {
   height: 30px;
+}
+
+.slider__matrimonio .swiper-slide {
+  height: 230px;
+}
+
+.slider__viaggio .swiper-slide {
+  height: 340px;
+  background-color: white;
+}
+.slider__viaggio .swiper-slide.slider__int > div {
+  padding: 50px 18px 40px;
+}
+@media screen and (min-width: 1025px) {
+  .slider__viaggio .swiper-slide.slider__int > div {
+    padding: 50px 40px 40px;
+  }
+}
+.slider__viaggio h3 {
+  margin-bottom: 10px;
+}
+.slider__viaggio p {
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 1025px) {
+  .slider__viaggio .swiper-container {
+    width: calc( ( 100% - 60px) / 2);
+  }
 }
 
 .swiper-button-next,
@@ -255,15 +283,24 @@ section .section__box__icona {
 
 .slider__img__wrapper {
   background-size: cover;
-  background-position-x: right;
-  background-position-y: center;
+  background-position: center;
 }
 
 .chiesa {
   background-image: url("/storage/img/foto/chiesa.jpeg");
+  background-position-x: right;
+  background-position-y: center;
 }
 
 .ristorante {
+  background-image: url("/storage/img/foto/rifugiomaranza.jpg");
+}
+
+.img__caterina {
+  background-image: url("/storage/img/foto/rifugiomaranza.jpg");
+}
+
+.img__matteo {
   background-image: url("/storage/img/foto/rifugiomaranza.jpg");
 }
 
@@ -351,6 +388,68 @@ section .section__box__icona {
   background-color: #F3E0D6;
   padding: 25px;
   margin: 40px 0;
+}
+
+@media screen and (min-width: 801px) {
+  .tappa__wrp {
+    display: flex;
+  }
+}
+@media screen and (min-width: 801px) {
+  .tappa__wrp:nth-child(3n+1) {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 801px) and (min-width: 801px) {
+  .tappa__wrp:nth-child(3n+1) .tappa__box {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+}
+.tappa__box {
+  text-align: left;
+  padding: 45px 35px;
+  margin: 10px 0;
+}
+@media screen and (min-width: 801px) {
+  .tappa__box {
+    flex-basis: 60%;
+    margin-right: 20px;
+  }
+}
+.tappa__date {
+  font-family: "Amatic SC", cursive;
+  font-size: 20px;
+}
+.tappa__title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.tappa__text p:not(:last-child) {
+  margin-bottom: 12px;
+}
+.tappa__img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.tappa__img.roma {
+  background-image: url("/storage/img/foto/roma.jpg");
+}
+.tappa__img.napoli {
+  background-image: url("/storage/img/foto/pompei.jpg");
+}
+.tappa__img.vigolana {
+  background-image: url("/storage/img/foto/vigolana.jpg");
+}
+@media screen and (min-width: 801px) {
+  .tappa__img {
+    height: auto;
+    flex-basis: 40%;
+    margin: 10px 0;
+  }
 }
 
 .heroBgFlower {

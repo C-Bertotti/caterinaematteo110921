@@ -56,7 +56,7 @@
         </div>
     </section>
     <div class="divider divider__small"></div>
-    <section class="slider__matrimonio">
+    <section class="slider slider__matrimonio">
         <div class="mycontainer container-m">
             <div class="slider__wrapper">
                 <!-- Slider ritrovo -->

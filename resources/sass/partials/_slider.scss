@@ -27,9 +27,8 @@
     }
 }
 
-.slider__matrimonio {
+.slider {
     .swiper-slide{
-        height: 230px;
 
         &.cover{
             display: flex;
@@ -49,6 +48,45 @@
             .section__box__icona{
                 height: 30px;
             }
+        }
+    }
+
+    
+}
+
+.slider__matrimonio {
+    .swiper-slide{
+        height: 230px;
+    }
+}
+
+.slider__viaggio {
+    .swiper-slide{
+        height: 340px;
+        background-color: white;  
+        
+        &.slider__int {
+            & > div {
+                padding: 50px 18px 40px;
+                @include screen(xxl) {
+                    padding: 50px 40px 40px;
+                }
+            }
+        }
+    }
+
+    h3 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    .swiper-container {
+    
+        @include screen(xxl) {
+            width: calc( ( 100% - 60px) / 2);
         }
     }
 }
@@ -75,15 +113,23 @@
 
 .slider__img__wrapper {
     background-size: cover;
-    background-position-x: right;
-    background-position-y: center;
-
+    background-position: center;
 }
 
 .chiesa {
     background-image: url("/storage/img/foto/chiesa.jpeg");
+    background-position-x: right;
+    background-position-y: center;
 }
 
 .ristorante {
+    background-image: url("/storage/img/foto/rifugiomaranza.jpg");
+}
+
+.img__caterina {
+    background-image: url("/storage/img/foto/rifugiomaranza.jpg");
+}
+
+.img__matteo {
     background-image: url("/storage/img/foto/rifugiomaranza.jpg");
 }
