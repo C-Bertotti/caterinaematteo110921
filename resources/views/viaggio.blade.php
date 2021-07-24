@@ -5,23 +5,7 @@
 @endsection
 
 @section('header')
-    <div class="mycontainer container-l ">
-        <nav>
-            <div class="nav__left">
-                <p class="nav__title">Caterina e Matteo</p>
-                <img id="burger" src="{{asset('storage/img/icone/menu.svg')}}" alt="Icona menu">
-            </div>
-            <div id="nav__right">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </nav>    
-    </div>
+    @include('layouts/header')  
 @endsection
 
 @section('main')
@@ -84,7 +68,8 @@
                                 <p>Anche il suo <strong>orientamento</strong> denota delle lacune, ma ci sta lavorando su (work in progress!)</p>
                             </div>
                         </div>
-                        <div class="swiper-slide bg-pri slider__img__wrapper ristorante">
+                        <div class="swiper-slide bg-pri slider__img__wrapper img__caterina">
+                            <div class="slider__border"></div>
                         </div>
                     </div>
                 
@@ -128,7 +113,8 @@
                                 <p>Smisurata la sua <strong>ansia</strong> di dimenticare le cose, ma per fortuna può contare sulla capacità organizzativa della sua compagna.</p>
                             </div>
                         </div>
-                        <div class="swiper-slide bg-pri slider__img__wrapper ristorante">
+                        <div class="swiper-slide bg-pri slider__img__wrapper img__matteo">
+                            <div class="slider__border"></div>
                         </div>
                     </div>
                 

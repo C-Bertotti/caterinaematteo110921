@@ -6,6 +6,11 @@
 
         <title>@yield('pageTitle')</title>
 
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('storage/img/favicon') }}/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('storage/img/favicon') }}/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('storage/img/favicon') }}/favicon-16x16.png">
+        <link rel="manifest" href="{{ asset('storage/img/favicon') }}/site.webmanifest">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +24,8 @@
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
         @yield('links')
+
+
     </head>
     <body>
         <header>

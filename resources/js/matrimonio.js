@@ -35,108 +35,73 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiY2F0ZTQ5OTciLCJhIjoiY2twZnA5ejYxMHk0eTJubzhkM
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/cate4997/ckpfphzxm1gdg17pllyu17su6',
-  center: [11.192884, 46.006067],
-  zoom: 11.5
+  center: [11.166323, 46.027708],
+  zoom: 11
 });
-   
-map.on('load', function () {
-  //linea strada
-  map.addSource('route', {
-    'type': 'geojson',
-    'data': {
-      'type': 'Feature',
-      'properties': {},
-      'geometry': {
-        'type': 'LineString',
-        'coordinates': [
-          [11.212763, 46.004608],
-          [11.224030, 46.001299],
-          [11.165597, 46.030164],
-          [11.164792, 46.029281],
-          [11.164787, 46.027970]
-        ]
-      }
+
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [11.166323, 46.027708]
+    },
+    properties: {
+      title: 'IL RISTORANTE',
+      description: 'Rifugio Maranza'
     }
-  });
-
-  // Add an image to use as a custom marker
-map.loadImage( 'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
-  function (error, image) {
-  if (error) throw error;
-
-  map.addImage('custom-marker', image);
-
-  // Add a GeoJSON source with 2 points
-  map.addSource('points', {
-  'type': 'geojson',
-  'data': {
-  'type': 'FeatureCollection',
-  'features': [
-  {
-  // feature for Mapbox DC
-  'type': 'Feature',
-  'geometry': {
-  'type': 'Point',
-  'coordinates': [
-    [11.212763, 46.004608],
-    [11.224030, 46.001299],
-    [11.165597, 46.030164],
-  ]
-  },
-  'properties': {
-  'title': 'Mapbox DC'
-  }
   },
   {
-  // feature for Mapbox SF
-  'type': 'Feature',
-  'geometry': {
-  'type': 'Point',
-  'coordinates': [
-    [11.212763, 46.004608],
-    [11.224030, 46.001299],
-    [11.165597, 46.030164],
-  ]
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [11.154885, 46.008020]
+    },
+    properties: {
+      title: 'IL RITROVO',
+      description: 'per lo sposo'
+    }
   },
-  'properties': {
-  'title': 'Mapbox SF'
-  }
-  }
-  ]
-  }
-  });
-   
-  // Add a symbol layer
-  map.addLayer({
-  'id': 'points',
-  'type': 'symbol',
-  'source': 'points',
-  'layout': {
-  'icon-image': 'custom-marker',
-  // get the title name from the source's "title" property
-  'text-field': ['get', 'title'],
-  'text-font': [
-  'Open Sans Semibold',
-  'Arial Unicode MS Bold'
-  ],
-  'text-offset': [0, 1.25],
-  'text-anchor': 'top'
-  }
-  });
-  
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [11.143278, 46.040047]
+    },
+    properties: {
+      title: 'IL RITROVO',
+      description: 'per la sposa'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [11.212679, 46.004470]
+    },
+    properties: {
+      title: 'LA CERIMONIA',
+      description: 'Santuario Madonna del Feles'
+    }
+  }]
+};
+
+// add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML('<h3 class="map__popup__title">' + marker.properties.title + '</h3><p class="map__popup__p">' + marker.properties.description + '</p>'))
+    .addTo(map);
 });
 
-map.addLayer({
-  'id': 'route',
-  'type': 'line',
-  'source': 'route',
-  'layout': {
-    'line-join': 'round',
-    'line-cap': 'round'
-  },
-  'paint': {
-    'line-color': '#F4A8A8',
-    'line-width': 6
-  }
-  });
-  });
+
+
+

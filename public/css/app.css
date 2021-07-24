@@ -111,13 +111,21 @@ header {
   border-bottom: 15px solid #EDF5F7;
 }
 header nav {
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 1025px) {
+  header nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 header nav .nav__left {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 11px 0;
   align-items: center;
 }
 header nav .nav__left .nav__title {
@@ -127,8 +135,59 @@ header nav .nav__left .nav__title {
 header nav .nav__left #burger {
   height: 18px;
 }
+@media screen and (min-width: 1025px) {
+  header nav .nav__left #burger {
+    display: none;
+  }
+}
 header nav #nav__right {
   display: none;
+}
+@media screen and (min-width: 1025px) {
+  header nav #nav__right {
+    display: block;
+  }
+}
+header nav #nav__right ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+@media screen and (min-width: 1025px) {
+  header nav #nav__right ul {
+    margin: 0;
+  }
+}
+header nav #nav__right ul li {
+  margin: 0;
+  width: 100%;
+}
+header nav #nav__right ul li a {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0;
+}
+header nav #nav__right ul li a span {
+  position: relative;
+}
+header nav #nav__right ul li a.active span::after, header nav #nav__right ul li a:hover span::after {
+  content: "";
+  background-color: #EDF5F7;
+  height: 12px;
+  position: absolute;
+  z-index: -10;
+  top: 10px;
+  right: -12px;
+  left: -12px;
+}
+@media screen and (min-width: 1025px) {
+  header nav #nav__right ul li {
+    display: inline-block;
+    width: auto;
+    margin: 0 20px;
+  }
 }
 header nav #nav__right.active {
   display: block;
@@ -168,6 +227,10 @@ section .section__box {
   padding: 30px;
   background-color: #fff;
   box-shadow: 1px 0px 10px rgba(211, 222, 227, 0.7);
+  transition: all 0.2s;
+}
+section .section__box:hover {
+  transform: scale(1.05);
 }
 section .section__box:not(:last-child) {
   margin-bottom: 30px;
@@ -284,6 +347,15 @@ section .section__box__icona {
 .slider__img__wrapper {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+.slider__img__wrapper .slider__border {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 30px solid white;
 }
 
 .chiesa {
@@ -297,23 +369,70 @@ section .section__box__icona {
 }
 
 .img__caterina {
-  background-image: url("/storage/img/foto/rifugiomaranza.jpg");
+  background-image: url("/storage/img/foto/caterina.jpg");
+  background-position-y: top;
 }
 
 .img__matteo {
-  background-image: url("/storage/img/foto/rifugiomaranza.jpg");
+  background-image: url("/storage/img/foto/matteo.jpg");
+  background-position-x: left;
+}
+
+#map__sec {
+  padding-bottom: 0;
 }
 
 #map {
   width: 100%;
   height: 400px;
 }
+#map h3.map__popup__title {
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+#map p.map__popup__p {
+  padding: 0 20px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.marker {
+  background-image: url("/storage/img/icone/pin.svg");
+  background-size: cover;
+  width: 31px;
+  height: 39px;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mapboxgl-popup {
+  max-width: 700px !important;
+}
 
 .regalo__box {
   margin-top: 40px;
-  padding: 35px 25px;
+  padding: 35px 20px;
   background-color: #fff;
   text-align: left;
+}
+@media screen and (min-width: 320px) {
+  .regalo__box {
+    padding: 35px 15px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .regalo__box {
+    padding: 35px 25px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .regalo__box {
@@ -341,7 +460,12 @@ section .section__box__icona {
   margin: 0;
 }
 .regalo__box p {
-  font-size: 12px;
+  font-size: 11px;
+}
+@media screen and (min-width: 320px) {
+  .regalo__box p {
+    font-size: 13px;
+  }
 }
 @media screen and (min-width: 480px) {
   .regalo__box p {

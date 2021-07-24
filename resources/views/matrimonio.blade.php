@@ -10,23 +10,7 @@
 @endsection
 
 @section('header')
-    <div class="mycontainer container-l ">
-        <nav>
-            <div class="nav__left">
-                <p class="nav__title">Caterina e Matteo</p>
-                <img id="burger" src="{{asset('storage/img/icone/menu.svg')}}" alt="Icona menu">
-            </div>
-            <div id="nav__right">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </nav>    
-    </div>
+    @include('layouts/header')  
 @endsection
 
 @section('main')
@@ -74,7 +58,7 @@
                             <div>
                                 <img class="section__box__icona" src="{{asset('storage/img/icone/sposa_or.svg')}}" alt="Icona della sposa">
                                 <h4>Per la sposa</h4>
-                                <p>ore 9:00<br>Via Trento, 9 - Vigolo Vattaro</p>
+                                <p>ore 9:00<br>Via Galassa, 18/A - Trento</p>
                             </div>
                         </div>
                         <div class="swiper-slide slider__int bg-pri">
@@ -144,19 +128,13 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="">
+    <section id="map__sec">
+        <div>
             <img class="section__fiore" src="{{asset('storage/img/fiori/fiore_viola.svg')}}" alt="Viola">
             <h2 class="section__titolo">i luoghi</h2>
-            <div id='map'></div>
+            <div id='map' class="map"></div>
         </div>
     </section>
-
-
-
-
-        
-
 @endsection
 
 @section('script')

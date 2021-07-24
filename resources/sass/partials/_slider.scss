@@ -114,6 +114,16 @@
 .slider__img__wrapper {
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+
+    .slider__border {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: 30px solid white;
+    }
 }
 
 .chiesa {
@@ -127,9 +137,11 @@
 }
 
 .img__caterina {
-    background-image: url("/storage/img/foto/rifugiomaranza.jpg");
+    background-image: url("/storage/img/foto/caterina.jpg");
+    background-position-y: top;
 }
 
 .img__matteo {
-    background-image: url("/storage/img/foto/rifugiomaranza.jpg");
+    background-image: url("/storage/img/foto/matteo.jpg");
+    background-position-x: left;
 }

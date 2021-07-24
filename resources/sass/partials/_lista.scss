@@ -1,8 +1,16 @@
 .regalo__box{
     margin-top: 40px;
-    padding: 35px 25px;
+    padding: 35px 20px;
     background-color: #fff;
     text-align: left;
+
+    @include screen(s) {
+        padding: 35px 15px;
+    }
+
+    @include screen(m) {
+        padding: 35px 25px;
+    }
     
     @include screen(xxl) {
         display: flex;
@@ -30,7 +38,11 @@
     }
 
     p{
-        font-size: 12px;
+        font-size: 11px;
+
+        @include screen(s) {
+            font-size: 13px;
+        }
 
         @include screen(m) {
             font-size: 15px;

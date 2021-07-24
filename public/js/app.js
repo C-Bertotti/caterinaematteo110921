@@ -11,9 +11,9 @@
 var moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 
 moment().format();
-var burger = $('#burger');
+var $burger = $('#burger');
 var dropdownMenu = $('#nav__right');
-burger.click(function () {
+$burger.click(function () {
   dropdownMenu.toggleClass("active");
 });
 var swiper = new Swiper('.swiper-container', {

@@ -5,23 +5,7 @@
 @endsection
 
 @section('header')
-    <div class="mycontainer container-l ">
-        <nav>
-            <div class="nav__left">
-                <p class="nav__title">Caterina e Matteo</p>
-                <img id="burger" src="{{asset('storage/img/icone/menu.svg')}}" alt="Icona menu">
-            </div>
-            <div id="nav__right">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </nav>    
-    </div>
+    @include('layouts/header')  
 @endsection
 
 @section('main')
@@ -44,7 +28,7 @@
             <div class="regalo__box">
                 <div class="regalo__box__column">
                     <h5>IBAN</h5>
-                    <p>IT22000000000000000000000</p>
+                    <p>IT28 M030 5801 6041 0057 2088 761</p>
                 </div>
                 <div class="regalo__box__column">
                     <h5>causale</h5>
