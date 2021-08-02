@@ -1,3 +1,6 @@
+<?php if (App::environment('production')) {
+    URL::forceScheme('https');
+} ?>
 @extends('layouts/base')
 
 @section('pageTitle')
